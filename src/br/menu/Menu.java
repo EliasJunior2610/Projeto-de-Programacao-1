@@ -12,19 +12,20 @@ public class Menu {
 		// instanciando o scanner;
 		Scanner ler = new Scanner(System.in);
 		// criando as variáveis;
-		int x, b, quantidade = 0;
+		String x, b = "0";
+		int quantidade = 0;
 
 		// criando a estrutura de repetição para mostrar o menu;
 		do {
 			// menu;
 			System.out.println("------------------------------");
-			System.out.println("Se você deseja pedir bilhete digite 0, caso não, digite 1.");
+			System.out.println("Se você deseja pedir bilhete insira qualquer valor, caso não, digite 1.");
 			System.out.println("------------------------------");
 			System.out.print("Resposta: ");
 			// lendo a variável;
-			x = ler.nextInt();
+			x = ler.next();
 			// saindo do menu, caso o usuário não queira comprar;
-			if (x == 1) {
+			if (x.equals("1")) {
 				break;
 				// escolhendo o tipo do bilhete, caso o usuário queira comprar;
 			} else {
@@ -37,10 +38,10 @@ public class Menu {
 				System.out.println("------------------------------");
 				System.out.print("Resposta: ");
 				// lendo o tipo de bilhete
-				b = ler.nextInt();
+				b = ler.next();
 
 				// comprando bilhetes de cinema;
-				if (b == 1) {
+				if (b.equals("1")) {
 					System.out.println("------------------------------");
 					System.out.print("Quantos bilhetes você deseja: ");
 					quantidade = ler.nextInt();
@@ -50,7 +51,7 @@ public class Menu {
 					System.out.println("O valor total é igual a R$" + b1.preço);
 
 					// comprando bilhetes de festa;
-				} else if (b == 2) {
+				} else if (b.equals("2")) {
 					System.out.println("------------------------------");
 					System.out.print("Quantos bilhetes você deseja: ");
 					quantidade = ler.nextInt();
@@ -60,7 +61,7 @@ public class Menu {
 					System.out.println("O valor total é igual a R$" + f1.preço);
 
 					// comprando bilhetes de show;
-				} else if (b == 3) {
+				} else if (b.equals("3")) {
 					System.out.println("------------------------------");
 					System.out.print("Quantos bilhetes você deseja: ");
 					quantidade = ler.nextInt();
@@ -70,7 +71,7 @@ public class Menu {
 					System.out.println("O valor total é igual a R$" + s1.preço);
 
 					// comprando bilhetes de teatro;
-				} else if (b == 4) {
+				} else if (b.equals("4")) {
 					System.out.println("------------------------------");
 					System.out.print("Quantos bilhetes você deseja: ");
 					quantidade = ler.nextInt();
@@ -85,7 +86,7 @@ public class Menu {
 				}
 			}
 			// fim da estrutura de repetição;
-		} while (x == 0);
+		} while (x != "1");
 		ler.close();
 	}
 
