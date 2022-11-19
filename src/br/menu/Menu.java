@@ -83,6 +83,7 @@ public class Menu {
 					// caso o usuário escolha uma opção inválida;
 				} else {
 					System.out.println("Erro! Opção inválida!");
+					System.out.println("Por favor, insira um dos valores indicados.");
 				}
 			}
 			// fim da estrutura de repetição;

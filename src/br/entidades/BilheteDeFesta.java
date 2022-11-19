@@ -38,6 +38,7 @@ public class BilheteDeFesta extends Bilhete implements IFesta{
             }
         } catch (Exception ex) {
             System.out.println("Erro! O item que você digitou não se encontra na lista!");
+            System.out.println("Apenas item que se encontram na lista podem ser apagados.");
         }
     }
 }

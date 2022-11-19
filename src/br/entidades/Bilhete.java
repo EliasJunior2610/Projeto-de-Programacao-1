@@ -1,31 +1,33 @@
 //nome do pacote;
 package br.entidades;
+
 //importação;
 import java.util.ArrayList;
+
 //inicializando a entidade;
 public class Bilhete {
 
-	//atributos da entidade
+	// atributos da entidade
 	public double horário;
 	public double preço;
 	public int quantidade;
-	//criando o ArrayList;
+	// criando o ArrayList;
 	private ArrayList<String> bilhete;
-	
-	//configurando os atributos;
-	public Bilhete (double horário, double preço, int quantidade) {
+
+	// configurando os atributos;
+	public Bilhete(double horário, double preço, int quantidade) {
 		super();
 		this.horário = horário;
 		this.preço = preço;
 		this.quantidade = quantidade;
 	}
-	
-	//inicializando o ArrayList;
-	private Bilhete(ArrayList<String> bilhete) {
-        bilhete = new ArrayList<String>();
-    }
 
-	//getters e setters;
+	// inicializando o ArrayList;
+	private Bilhete(ArrayList<String> bilhete) {
+		bilhete = new ArrayList<String>();
+	}
+
+	// getters e setters;
 	public double getHorario() {
 		return horário;
 	}
@@ -49,29 +51,31 @@ public class Bilhete {
 	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
 	}
-	//Crud do ArrayList;
+
+	// Crud do ArrayList;
 	private ArrayList<String> getBilhete() {
-        return bilhete;
-    }
+		return bilhete;
+	}
 
-    private void setBilhete (ArrayList<String> bilhete) {
-        this.bilhete = bilhete;
-    }
-    
-    private void addBilhete (String b) {
-        bilhete.add(b);
-    }
+	private void setBilhete(ArrayList<String> bilhete) {
+		this.bilhete = bilhete;
+	}
 
-    private void removeBilhete (String b) {
-        try {
-            for (int i = 0; i < bilhete.size(); i++) {
-                if (bilhete.get(i) == b) {
-                    bilhete.remove(i);
-                    break;
-                }
-            }
-        } catch (Exception ex) {
-            System.out.println("Erro! O item que você digitou não se encontra na lista!");
-        }
-    }
+	private void addBilhete(String b) {
+		bilhete.add(b);
+	}
+
+	private void removeBilhete(String b) {
+		try {
+			for (int i = 0; i < bilhete.size(); i++) {
+				if (bilhete.get(i) == b) {
+					bilhete.remove(i);
+					break;
+				}
+			}
+		} catch (Exception ex) {
+			System.out.println("Erro! O item que você digitou não se encontra na lista!");
+			System.out.println("Apenas item que se encontram na lista podem ser apagados.");
+		}
+	}
 }
