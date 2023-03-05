@@ -13,7 +13,8 @@ public class Menu {
 		Scanner ler = new Scanner(System.in);
 		// criando as variáveis;
 		String x, b = "0";
-		int quantidade = 0;
+		int quantidade= 0;
+		double soma = 0;
 
 		// criando a estrutura de repetição para mostrar o menu;
 		do {
@@ -48,7 +49,8 @@ public class Menu {
 					System.out.println("------------------------------");
 					BilheteDeCinema b1 = new BilheteDeCinema(2.30, 30 * quantidade, quantidade);
 					System.out.println("Você pediu " + b1.quantidade + " bilhetes.");
-					System.out.println("O valor total é igual a R$" + b1.preço);
+					soma = soma + b1.preço;
+					System.out.println("O valor total é igual a R$" + soma);
 
 					// comprando bilhetes de festa;
 				} else if (b.equals("2")) {
@@ -58,7 +60,8 @@ public class Menu {
 					System.out.println("------------------------------");
 					BilheteDeFesta f1 = new BilheteDeFesta(2.30, 20 * quantidade, quantidade);
 					System.out.println("Você pediu " + f1.quantidade + " bilhetes.");
-					System.out.println("O valor total é igual a R$" + f1.preço);
+					soma = soma + f1.preço;
+					System.out.println("O valor total é igual a R$" + soma);
 
 					// comprando bilhetes de show;
 				} else if (b.equals("3")) {
@@ -68,7 +71,8 @@ public class Menu {
 					System.out.println("------------------------------");
 					BilheteDeShow s1 = new BilheteDeShow(2.30, 90 * quantidade, quantidade);
 					System.out.println("Você pediu " + s1.quantidade + " bilhetes.");
-					System.out.println("O valor total é igual a R$" + s1.preço);
+					soma = soma + s1.preço;
+					System.out.println("O valor total é igual a R$" + soma);
 
 					// comprando bilhetes de teatro;
 				} else if (b.equals("4")) {
@@ -78,7 +82,8 @@ public class Menu {
 					System.out.println("------------------------------");
 					BilheteDeTeatro t1 = new BilheteDeTeatro(2.30, 15 * quantidade, quantidade);
 					System.out.println("Você pediu " + t1.quantidade + " bilhetes.");
-					System.out.println("O valor total é igual a R$" + t1.preço);
+					soma = soma + t1.preço;
+					System.out.println("O valor total é igual a R$" + soma);
 
 					// caso o usuário escolha uma opção inválida;
 				} else {
