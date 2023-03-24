@@ -16,6 +16,15 @@ public interface ICinema {
     // abre um dado boolean, já que deve-se escolher entre o filme ter ou não legenda.
     final boolean legenda = true;
     // método utilizado no Serviço.
+    // enumeração para os valores possíveis do gênero dos filmes
+    enum Genero {
+        ACAO,
+        AVENTURA,
+        COMEDIA,
+        DRAMA,
+        FICCAO_CIENTIFICA,
+        TERROR
+    }
     public void cadastrar(double preço, double horário, int quantidade);
     
 } 
