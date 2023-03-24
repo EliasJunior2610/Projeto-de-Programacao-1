@@ -1,10 +1,9 @@
 //nome do pacote;
 package br.entidades;
 //importações;
-import br.interfaces.IFesta;
 import java.util.ArrayList;
 //inicializando a entidade;
-public class BilheteDeFesta extends Bilhete implements IFesta{
+public class BilheteDeFesta extends Bilhete {
 	//criando o ArrayList;
 	private ArrayList<String> bilhete;
 	//herdando atributos da entidade mãe;

@@ -3,16 +3,19 @@ package br.interfaces;
 public interface ICinema {
     // cria uma variavel string para "título, gênero, classificação, idioma, Lugar, sala" todas públicas
     
-    public String titulo = "Título";
-    public String genero = "Gênero";
-    public String classificacao = "Classificação";
-    public String idioma = "Idioma";
-    public String lugar = "Lugar";
-	public String sala = "Sala";
+    final String titulo = "Título";
+    final String genero = "Gênero";
+    final String classificacao = "Classificação";
+    final String idioma = "Idioma";
+    final String lugar = "Lugar";
+	final String sala = "Sala";
     //abre uma variavel double, já que se usa números.
-    public double duração = 120;
+    final double duração = 120;
     // abre um dado boolean, já que deve-se escolher entre o filme ser ou não 3d.
-    public boolean filme3d = false;
-     // abre um dado boolean, já que deve-se escolher entre o filme ter ou não legenda.
-	public boolean legenda = true;
+    final boolean filme3d = false;
+    // abre um dado boolean, já que deve-se escolher entre o filme ter ou não legenda.
+    final boolean legenda = true;
+    // método utilizado no Serviço.
+    public void cadastrar(double preço, double horário, int quantidade);
+    
 } 

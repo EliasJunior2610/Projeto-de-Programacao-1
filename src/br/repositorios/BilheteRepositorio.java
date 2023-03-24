@@ -7,11 +7,12 @@ import java.util.ArrayList;
 //inicializando o repositório;
 public class BilheteRepositorio {
     // criando o ArrayList;
-    ArrayList<String> bilheteRepositorio;
+    private ArrayList<String> bilheteRepositorio;
 
     // inicializando o ArrayList;
     public BilheteRepositorio(ArrayList<String> bilheteRepositorio) {
-        bilheteRepositorio = new ArrayList<String>();
+        super();
+        this.bilheteRepositorio = bilheteRepositorio;
     }
 
     // Crud do ArrayList;
@@ -22,7 +23,7 @@ public class BilheteRepositorio {
     public void setBilheteRepositorio(ArrayList<String> bilheteRepositorio) {
         this.bilheteRepositorio = bilheteRepositorio;
     }
-
+    
     public void addBilheteRepositorio(String b) {
         bilheteRepositorio.add(b);
     }
@@ -30,14 +31,14 @@ public class BilheteRepositorio {
     public void removeBilheteRepositorio(String b) {
         try {
             for (int i = 0; i < bilheteRepositorio.size(); i++) {
-                if (bilheteRepositorio.get(i) == b) {
+                if (bilheteRepositorio.get(i).equals(b)) {
                     bilheteRepositorio.remove(i);
                     break;
                 }
             }
         } catch (Exception ex) {
             System.out.println("Erro! O item que você digitou não se encontra na lista!");
-            System.out.println("Apenas item que se encontram na lista podem ser apagados.");
+            System.out.println("Apenas itens que se encontram na lista podem ser apagados.");
         }
     }
 }

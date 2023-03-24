@@ -2,11 +2,10 @@
 package br.entidades;
 
 //importações;
-import br.interfaces.IShow;
 import java.util.ArrayList;
 
 //inicializando a entidade;
-public class BilheteDeShow extends Bilhete implements IShow {
+public class BilheteDeShow extends Bilhete {
     // criando o ArrayList;
     private ArrayList<String> bilhete;
 

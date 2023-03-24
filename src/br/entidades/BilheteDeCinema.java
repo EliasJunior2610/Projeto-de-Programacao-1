@@ -2,11 +2,10 @@
 package br.entidades;
 
 //importações;
-import br.interfaces.ICinema;
 import java.util.ArrayList;
 
 //inicializando a entidade;
-public class BilheteDeCinema extends Bilhete implements ICinema {
+public class BilheteDeCinema extends Bilhete {
     // criando o ArrayList;
     private ArrayList<String> bilhete;
 

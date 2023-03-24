@@ -1,7 +1,9 @@
 package br.servicos;
 //irá importar a entidade de bilhetes
 import br.entidades.BilheteDeCinema;
-public class CinemaServico {
+import br.interfaces.ICinema;
+//implementando a interface.
+public class CinemaServico implements ICinema {
 	//criamos um método cadastrar e dentro dele instanciamos um novo bilhete e configuramos os atributos dessa instância
 	public void cadastrar(double preço, double horário, int quantidade) {
 		// try irá tentar colocar um novo valor para os atributos

@@ -2,11 +2,10 @@
 package br.entidades;
 
 //importações;
-import br.interfaces.ITeatro;
 import java.util.ArrayList;
 
 //inicializando a entidade;
-public class BilheteDeTeatro extends Bilhete implements ITeatro {
+public class BilheteDeTeatro extends Bilhete {
     // criando o ArrayList;
     private ArrayList<String> bilhete;
 
