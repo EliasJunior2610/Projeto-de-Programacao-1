@@ -6,9 +6,11 @@ import java.util.ArrayList;
 
 //inicializando a entidade;
 public class BilheteDeCinema extends Bilhete {
-    // criando o ArrayList;
+    //criando o ArrayList;
     private ArrayList<String> bilhete;
+    //criando a váriavel poltrona, junto com seu getter e setter;
     private String poltrona;
+    
     public String getPoltrona() {
         return poltrona;
     }

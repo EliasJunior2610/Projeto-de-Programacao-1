@@ -35,9 +35,9 @@ public class Menu {
 				// escolhendo o tipo do bilhete, caso o usuário queira comprar;
 			} else {
 				System.out.println("------------------------------");
-				System.out.println("Tipos de Bilhetes: Cinema, Festa, Show e Teatro;");
+				System.out.println("Tipos de Bilhetes: Cinema, Passagem, Show e Teatro;");
 				System.out.println("Digite 1 para pedir bilhete de cinema;");
-				System.out.println("Digite 2 para pedir bilhete de festa;");
+				System.out.println("Digite 2 para pedir passagem;");
 				System.out.println("Digite 3 para pedir bilhete de show;");
 				System.out.println("Digite 4 para pedir bilhete de teatro;");
 				System.out.println("------------------------------");
@@ -54,21 +54,21 @@ public class Menu {
 					System.out.print("Quantos bilhetes você deseja: ");
 					quantidade = ler.nextInt();
 					System.out.println("------------------------------");
-					BilheteDeCinema b1 = new BilheteDeCinema(2.30, 30 * quantidade, quantidade,"A24");
+					BilheteDeCinema b1 = new BilheteDeCinema(2.30, 30 * quantidade, quantidade,"A32");
 					System.out.println("Você pediu " + b1.quantidade + " bilhetes.");
 					soma = soma + b1.preço;
 					System.out.println("O valor total é igual a R$" + soma);
 
-					// comprando bilhetes de festa;
+					// comprando passagens;
 				} else if (b.equals("2")) {
-					repositorio.addBilheteRepositorio("Bilhete de Festa");
+					repositorio.addBilheteRepositorio("Passagem");
 					ArrayList<String> bilhetes = repositorio.getBilheteRepositorio();
 					System.out.printf("Você escolheu comprar %s \n", bilhetes);
 					System.out.println("------------------------------");
 					System.out.print("Quantos bilhetes você deseja: ");
 					quantidade = ler.nextInt();
 					System.out.println("------------------------------");
-					BilheteDeFesta f1 = new BilheteDeFesta(2.30, 20 * quantidade, quantidade);
+					Passagem f1 = new Passagem(2.30, 20 * quantidade, quantidade, "B14");
 					System.out.println("Você pediu " + f1.quantidade + " bilhetes.");
 					soma = soma + f1.preço;
 					System.out.println("O valor total é igual a R$" + soma);
