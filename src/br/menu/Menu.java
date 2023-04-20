@@ -54,7 +54,7 @@ public class Menu {
 					System.out.print("Quantos bilhetes você deseja: ");
 					quantidade = ler.nextInt();
 					System.out.println("------------------------------");
-					BilheteDeCinema b1 = new BilheteDeCinema(2.30, 30 * quantidade, quantidade);
+					BilheteDeCinema b1 = new BilheteDeCinema(2.30, 30 * quantidade, quantidade,"A24");
 					System.out.println("Você pediu " + b1.quantidade + " bilhetes.");
 					soma = soma + b1.preço;
 					System.out.println("O valor total é igual a R$" + soma);

@@ -8,10 +8,19 @@ import java.util.ArrayList;
 public class BilheteDeCinema extends Bilhete {
     // criando o ArrayList;
     private ArrayList<String> bilhete;
+    private String poltrona;
+    public String getPoltrona() {
+        return poltrona;
+    }
+
+    public void setPoltrona(String poltrona) {
+        this.poltrona = poltrona;
+    }
 
     // herdando atributos da entidade mãe;
-    public BilheteDeCinema(double horário, double preço, int quantidade) {
+    public BilheteDeCinema(double horário, double preço, int quantidade, String poltrona) {
         super(horário, preço, quantidade);
+        this.poltrona = poltrona;
     }
 
     // inicializando o ArrayList;
