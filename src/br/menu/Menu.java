@@ -1,4 +1,4 @@
-//Alunos: Denyel Fernando, Elias Sales, João Pedro, Luan Santos e Lucas Oliveira.
+//Alunos: Denyel Fernando, Elias Sales, João Carlos, João Pedro, Luan Santos, Lucas Oliveira e Ricardo Junior.
 //nome do pacote;
 package br.menu;
 
