@@ -1,5 +1,5 @@
 package br.servicos;
-//irá importar a entidade de bilhetes
+//irá importar a entidade de Passagem
 import br.entidades.Passagem;
 import br.interfaces.IPassagem;
 //implementando a interface.
